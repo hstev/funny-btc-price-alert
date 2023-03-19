@@ -2,11 +2,12 @@
   <v-app>
     <v-main>
       <v-container fluid>
+        <Notice />
         <v-row>
-          <v-col cols="12" md="4" offset="2">
+          <v-col cols="12" md="4" offset="2" class="mx-auto">
             <CurrencyDetail @updateNow="logRecord"/>
           </v-col>
-          <v-col cols="12" md="4" class="mt-5">
+          <v-col cols="12" md="4" class="mx-auto mt-5" >
               <Chart />
               <br />
               <HistoryTable :record="state.record"/>
@@ -15,8 +16,6 @@
       </v-container>
     </v-main>
   </v-app>
-
-  <Notice />
 </template>
 
 <script setup>
